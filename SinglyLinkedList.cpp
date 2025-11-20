@@ -9,10 +9,10 @@ public:
 		next = nullptr;
 	}
 };
-class LinkedList {
+class SinglyLinkedList {
 public:
 	Node* head;
-	LinkedList() {
+	SinglyLinkedList() {
 		head = nullptr;
 	}
 	bool isEmpty() {
@@ -174,4 +174,5 @@ int main()
 {
 	return 0;
 }
+
 
