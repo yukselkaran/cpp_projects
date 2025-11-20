@@ -16,7 +16,7 @@ public:
 		head = nullptr;
 	}
 	bool isEmpty() {
-		return head == nullptr;// true dönerse liste boş demek
+		return head == nullptr;
 	}
 
 	void pushFront(int d) {
@@ -174,3 +174,4 @@ int main()
 {
 	return 0;
 }
+
