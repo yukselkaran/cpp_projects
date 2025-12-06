@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 class Node {
@@ -45,9 +45,35 @@ public:
 		} while (current != head);
 		cout << "(Head)" << endl;
 	}
+	bool hasCycle(Node* head) {
+		if (head == nullptr)
+			return false;
+		Node* slow = head;
+		Node* fast = head;
+		while (fast != 0 && fast->next != 0) {
+			slow = slow->next;
+			fast = fast->next->next;
+			if (slow == fast)
+				return true;
+		}
+		return false;
+	}
 };
 
 int main() {
+	CircularLinkedList list;
+
+	list.insert(12);
+	list.insert(21);
+	list.insert(32);
+	list.insert(37);
+
+	list.printList();
+
+	if (list.hasCycle(list.head))
+		cout << "Cycle detected" << endl;
+	else
+		cout << "No cycle." << endl;
 
 	return 0;
 }
